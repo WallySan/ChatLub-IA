@@ -1,4 +1,6 @@
 # Marcolub - Chat com Inteligencia Artificial para consultas em banco de dados de lubrificacao industrial
+<img width="1915" height="955" alt="image" src="https://github.com/user-attachments/assets/cfce880b-33d4-42af-a8f6-ec5d1472927b" />
+
 
 Solucao aplicada em um sistema real (em producao) da **Marcolub**, empresa de lubrificacao industrial, cliente do autor deste projeto. Por esse motivo, o codigo fonte completo da aplicacao nao pode ser disponibilizado publicamente. O que se compartilha aqui e o **ChatController.php**, o componente mais relevante da solucao (o nucleo do chat com IA no backend), junto com a explicacao da arquitetura completa: frontend, backend e banco de dados MySQL.
 
