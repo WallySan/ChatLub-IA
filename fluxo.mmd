@@ -1,0 +1,25 @@
+flowchart TD
+    A[Usuario abre o chat no modal / Vue + Vuetify] --> B[Digita a pergunta em linguagem natural]
+    B --> C{chat_service monta historico}
+    C --> D[chat_repository envia POST /api/v2/chat]
+    D --> E[ChatController::perguntar / Laravel 11]
+    E --> F{Valida perfil admin na sessao?}
+    F -- nao --> G[Retorna 403]
+    F -- sim --> H{Valida empresa no token bearer?}
+    H -- nao --> I[Retorna 422]
+    H -- sim --> J[Chama executarConsulta]
+    J --> K[gerarSql: prompt + schema do information_schema + historico]
+    K --> L[chamarIa / NVIDIA NIM / Nemotron]
+    L --> M{saneiaSql: apenas SELECT, whitelist de tabelas, filtro de empresa}
+    M -- bloqueado --> N[Retorna erro de seguranca]
+    M -- ok --> O[DB::select no MySQL]
+    O --> P{SQL executou?}
+    P -- nao --> Q[corrigirSql: erro volta para a IA / 1 tentativa]
+    Q --> O
+    P -- sim --> R[montarResposta: resultado + tabela unidades para a IA]
+    R --> S[Resposta final em portugues]
+    S --> T{Interacao multipla de 3?}
+    T -- sim --> U[gerarSintese da conversa]
+    T -- nao --> V[Retorna resposta]
+    V --> W[Frontend exibe resposta no chat]
+    U --> V
