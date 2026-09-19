@@ -5,7 +5,7 @@
 Solucao aplicada em um sistema real (em producao) da **Marcolub**, empresa de lubrificacao industrial, cliente do autor deste projeto. Por esse motivo, o codigo fonte completo da aplicacao nao pode ser disponibilizado publicamente. O que se compartilha aqui e o **ChatController.php**, o componente mais relevante da solucao (o nucleo do chat com IA no backend), junto com a explicacao da arquitetura completa: frontend, backend e banco de dados MySQL.
 
 Video demonstrativo: 
-<img width="1152" height="648" alt="Design sem nome" src="https://github.com/user-attachments/assets/53b78e6f-2661-4a1c-8b8f-672a3d1e41af" />
+<img width="800" height="450" alt="Designsemnome2-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/33dc2241-f779-4d6c-a9fc-a90553a08670" />
 
 ## Visao geral da solucao
 
